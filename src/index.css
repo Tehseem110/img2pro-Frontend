@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.blue-gradient {
+    background-image: linear-gradient(to right, #142b9b 0%, #381d7d 105%);
+    }
+
+    .light-gradient {
+        background-image: linear-gradient(to right, #a8c2fe 0%, #90b0fc 0%, #6182ed 105%);;
+        }
