@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import HomePage from './Component/HomePage';
 import Nav from './Component/Nav';
 import { Route, Routes } from 'react-router-dom';
 import ImageConvertorPage from './pages/ImageConvertor/ImageConvertorPage';
@@ -8,20 +7,16 @@ import backgroundImagedark from './assets/Group.svg';
 import backgroundImagelight from './assets/light.svg';
 
 function App() {
-  const [theme, setThemes] = useState('dark');
+  const [theme, setThemes] = useState('light');
   const [click, setClick] = useState(false);
 
-  useEffect(() => {
-    const prefersDarkScheme = window.matchMedia(
-      '(prefers-color-scheme: dark)'
-    ).matches;
-
-    if (prefersDarkScheme) {
-      setThemes('dark');
-    } else {
-      setThemes('light');
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (true) {
+  //     setThemes('light');
+  //   } else {
+  //     setThemes('dark');
+  //   }
+  // }, []);
 
   useEffect(() => {
     if (theme === 'dark') {
